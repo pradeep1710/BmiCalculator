@@ -11,11 +11,16 @@ class BottomButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context, CupertinoPageRoute(builder: (context)=>const ResultPage()));
+          Navigator.push(context,
+              CupertinoPageRoute(builder: (context) => const ResultPage()));
         },
         child: FittedBox(
-            child:
-                Padding(padding: const EdgeInsets.all(5), child: Text(text))),
+            child: Padding(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  text,
+                  style: const TextStyle(fontSize: 25),
+                ))),
       ),
     );
   }
